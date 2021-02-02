@@ -29,3 +29,12 @@ def insertSort(array):
 
 # make the elements with any interval in the dispersion are ordered
 def shellSort(array):
+    N = len(array)
+    gap = N // 2
+    while gap > 0:
+        for i in range(gap, N):
+            for j in range(i, 0, -gap):
+                if array[j] < array[j-gap]:
+                    array[j-gap], array[j] = array[j], array[j-gap]
+        gap = gap // 2 
+    return array
