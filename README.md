@@ -1,3 +1,3 @@
 # Algorithms
 
-The algorithms  written in python in Algorithms, by Robert Sedgewick, 4th edition.
+The algorithms  written in python for Algorithms, by Robert Sedgewick, 4th edition.
