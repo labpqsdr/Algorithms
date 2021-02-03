@@ -7,7 +7,7 @@ def bubbleSort(array):
     return array
 
 # find the smallest number of this array, exchange it with the first element
-def chooseSort(array):
+def selectionSort(array):
     for i in range(len(array)):
         minimum = ip
         for j in range(i+1, len(array)):
@@ -20,7 +20,7 @@ def chooseSort(array):
 # example: i=1, array[1] only has one element, which is ordered
 # the thing we need to do is put another element in this ordered array, and check the element we put has the right order
 # cycle this process, we can have an ordered array
-def insertSort(array):
+def insertionSort(array):
     for i in range(1, len(array)):
         for j in range(i, 0, -1):
             if array[j] < array[j-1]:
@@ -38,3 +38,9 @@ def shellSort(array):
                     array[j-gap], array[j] = array[j], array[j-gap]
         gap = gap // 2 
     return array
+
+# time: propotional to NlogN
+# space(extra): proptional to N
+class  mergeSort(self, array):
+    def merge()
+    
