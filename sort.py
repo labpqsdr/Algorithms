@@ -1,4 +1,5 @@
-# double cycle
+# Bubble Sort
+# feature: double cycle
 def bubbleSort(array):
     for i in range(len(array)):
         for j in (i+1, len(array)):
@@ -6,6 +7,7 @@ def bubbleSort(array):
                 array[i], array[j] = array[j], array[i]
     return array
 
+# Selection Sort
 # find the smallest number of this array, exchange it with the first element
 def selectionSort(array):
     for i in range(len(array)):
@@ -16,6 +18,7 @@ def selectionSort(array):
         array[i], array[minimum] = array[minimum], array[i]
     return array
 
+# Insertion Sort
 # always make the front part ordered, like playing cards
 # example: i=1, array[1] only has one element, which is ordered
 # the thing we need to do is put another element in this ordered array, and check the element we put has the right order
@@ -27,6 +30,7 @@ def insertionSort(array):
                 array[j-1], array[j] = array[j], array[j-1]
     return array
 
+# Shell Sort
 # make the elements with any interval in the dispersion are ordered
 def shellSort(array):
     N = len(array)
@@ -39,40 +43,40 @@ def shellSort(array):
         gap = gap // 2 
     return array
 
+# Merge Sort
 # time: propotional to NlogN
 # space(extra): proptional to N
-
-
-def merge(array):
+def mergeSort(array):
     if len(array) > 1:
         mid = len(array) // 2
-        L = array[:mid]
-        M = array[mid:]
-        merge(L)
-        merge(M)
+        left = array[:mid]
+        right = array[mid:]
+        mergeSort(left)
+        mergeSort(right)
+        
         i = j = k = 0
-
-        # Until we reach either end of either L or M, pick larger among
-        # elements L and M and place them in the correct position at A[p..r]
-        while i < len(L) and j < len(M):
-            if L[i] < M[j]:
-                array[k] = L[i]
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                array[k] = left[i]
                 i += 1
             else:
-                array[k] = M[j]
+                array[k] = right[j]
                 j += 1
             k += 1
-
-        # When we run out of elements in either L or M,
-        # pick up the remaining elements and put in A[p..r]
-        while i < len(L):
-            array[k] = L[i]
+        while i < len(left):
+            array[k] = left[i]
             i += 1
             k += 1
-
-        while j < len(M):
-            array[k] = M[j]
+        while j < len(right):
+            array[k] = right[j]
             j += 1
             k += 1
     return array
 
+if __name__ == '__main__':
+    array = [1, 24, -7, 0, 94, 234, -77, 173]
+    print(mergeSort(array))
+
+# Quick Sort
+# 
+def quickSort()
