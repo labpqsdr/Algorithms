@@ -7,5 +7,5 @@ The algorithms  written in python for Algorithms, by Robert Sedgewick, 4th editi
 - [x] Choose sort
 - [x] Insert sort
 - [x] Shell sort
-- [ ] Merge sort
-- [ ] Quick sort
+- [x] Merge sort
+- [x] Quick sort
